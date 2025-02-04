@@ -1,0 +1,8 @@
+title: Brute Force Login Attempts
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  condition: selection
