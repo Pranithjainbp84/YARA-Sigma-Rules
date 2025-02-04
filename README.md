@@ -10,7 +10,6 @@ File: [detect_powershell_malware.yar]
 Description: A YARA rule designed to detect malicious PowerShell scripts. This rule scans for suspicious PowerShell activity often associated with malware and other malicious actions.
 
 2️⃣ Sigma Rule: Brute Force Attack Detection
-
 File: [brute_force_sigma.yml]
 
 Description: A Sigma rule created to detect brute force attack attempts by monitoring system logs for patterns indicative of repeated failed login attempts.
