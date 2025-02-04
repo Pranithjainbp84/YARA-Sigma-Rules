@@ -1,15 +1,33 @@
-YARA & Sigma Detection Rules
+# YARA & Sigma Detection Rules
 
-A set of detection rules for use in Security Operations Centers (SOC) to monitor and detect potential threats in the environment. These rules are designed to identify various types of security incidents using YARA and Sigma formats.
+This repository contains a set of **YARA** and **Sigma** detection rules designed for use in **Security Operations Centers (SOC)** to monitor and detect potential threats in your environment. The rules are written to identify various types of security incidents such as malicious scripts, brute-force attacks, and remote access tools.
 
-Rules:
+## Contents:
 
-1️⃣ YARA Rule: Detect Malicious PowerShell Scripts
-File: [detect_powershell_malware.yar]
+### 1. **YARA Rules**:
 
-Description: A YARA rule designed to detect malicious PowerShell scripts. This rule scans for suspicious PowerShell activity often associated with malware and other malicious actions.
+- **Malicious PowerShell Script Detection**  
+  [detect_powershell_malware.yar]  
+  This rule detects PowerShell commands typically associated with malware.
 
-2️⃣ Sigma Rule: Brute Force Attack Detection
-File: [brute_force_sigma.yml]
+- **Suspicious PowerShell EncodedCommand**  
+  [detect_powershell_encodedcommand.yar]  
+  Identifies PowerShell usage with the `-EncodedCommand` option, often used in obfuscated attack scenarios.
 
-Description: A Sigma rule created to detect brute force attack attempts by monitoring system logs for patterns indicative of repeated failed login attempts.
+- **Malicious VBA Macro Detection**  
+  [detect_vba_macro.yar]  
+  Detects suspicious VBA macros that execute commands or download files.
+
+- **Remote Access Tools (RAT) Detection**  
+  [detect_rat.yar]  
+  Identifies known RAT tools like `msfvenom` and `njRAT`.
+
+### 2. **Sigma Rule**:
+
+- **Brute Force Attack Detection**  
+  [brute_force_sigma.yml]  
+  Monitors Windows Security logs (EventID 4625) to detect multiple failed login attempts indicative of brute-force attacks.
+
+
+
+
